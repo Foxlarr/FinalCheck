@@ -19,3 +19,7 @@ string row = (string.Join(" ", result, 0, realSize));
 return row;
 }
 
+System.Console.Write("[ ");
+Console.Write(symbolCount(line));
+System.Console.Write(" ]");
+Console.ReadKey(true);
