@@ -7,19 +7,18 @@ string symbolCount(string line)
 string[] M = line.Split(' ');
 var result = new string[M.Length];
 var realSize = 0;
-foreach (var value in M)
+foreach (var value in M) //count words
 {
-    if (value.Length <= 3)
+    if (value.Length <= 3) //count symbols
     {
         result[realSize] = value;
         realSize++;
     }
 }
-string row = (string.Join(" ", result, 0, realSize));
+string row = (string.Join("', '", result, 0, realSize));
 return row;
 }
 
-System.Console.Write("[ ");
-Console.Write(symbolCount(line));
-System.Console.Write(" ]");
+Console.WriteLine($"['{symbolCount(line)}']");
+System.Console.WriteLine("Press any key");
 Console.ReadKey(true);
